@@ -1,0 +1,23 @@
+# keiailab OSS · GitLab CI (self-contained, RFC-0043 spirit / shadow phase)
+# Mirror of the local quality gates: ruff -> pytest.
+# allow_failure keeps this non-blocking until a runner + green baseline exist.
+stages: [lint, test]
+
+default:
+  image: python:3.13-slim
+  tags: [keiailab]
+
+ruff:
+  stage: lint
+  script:
+    - pip install --quiet ruff
+    - ruff check .
+  allow_failure: true
+
+pytest:
+  stage: test
+  script:
+    - pip install --quiet -e . || pip install --quiet -r requirements.txt || true
+    - pip install --quiet pytest
+    - pytest
+  allow_failure: true
