@@ -5,7 +5,6 @@ stages: [lint, test]
 
 default:
   image: python:3.13-slim
-  tags: [keiailab]
 
 ruff:
   stage: lint
