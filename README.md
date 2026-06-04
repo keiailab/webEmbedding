@@ -119,8 +119,7 @@ For MCP clients that launch stdio servers over npm:
 The server exposes URL inspection, capture, rebuild, verification, queue, and HAR-replay
 tools, including `inspect_url`, `audit_reference_url`, `classify_clone_mode`,
 `capture_reference_bundle`, `build_rebuild_scaffold`, `clone_reference_url`,
-`verify_fidelity_report`, and `replay_har_requests`. The MCP Registry identity is
-`io.github.jongko54/web-embedding`.
+`verify_fidelity_report`, and `replay_har_requests`.
 
 A hosted, read-only intake endpoint is also available at
 `https://webembedding-mcp.vercel.app/mcp`. It exposes only low-risk routing tools (URL
